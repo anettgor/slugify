@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(233, 225, 242);
+  margin: 5% 1% 0 30%;
+}
+#slug {
+  font-size: 15px;
+  width: 500px;
+  height: 100px;
+
+  padding: 5px 15px;
+  border: none;
+  border-radius: 20px;
+}
+#copy {
+  padding: 10px 2%;
+  border: none;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
