@@ -21,7 +21,7 @@ function updateValue(e) {
 slug.addEventListener("input", updateValue);
 
 function copyUrl(buttons, texts, result) {
-  if (texts.textContent !== "") {
+  if (resultString.textContent !== "") {
     navigator.clipboard.writeText(result.textContent);
     buttons.classList.add("copied");
     buttons.textContent = "Copied!";
