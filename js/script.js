@@ -22,15 +22,15 @@ function updateValue(e) {
 
 slug.addEventListener("input", updateValue);
 
-function copyUrl(eee, yyy, result) {
-  if (yyy.textContent !== "") {
+function copyUrl(buttons, texts, result) {
+  if (texts.textContent !== "") {
     navigator.clipboard.writeText(result.textContent);
-    eee.classList.add("copied");
-    eee.textContent = "Copied!";
+    buttons.classList.add("copied");
+    buttons.textContent = "Copied!";
 
     setTimeout(() => {
-      eee.classList.remove("copied");
-      eee.textContent = btnText;
+      buttons.classList.remove("copied");
+      buttons.textContent = btnText;
     }, 2000);
   } else {
     alert("Enter some text to copy");
