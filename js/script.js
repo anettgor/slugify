@@ -15,9 +15,7 @@ function updateValue(e) {
     .replace(/[^a-z0-9- ]/g, "")
     .replace(/  +/g, " ")
     .replaceAll(" ", "-");
-  if (resultString.textContent !== "") {
-    resultFullString.textContent = `https://www.wojas.pl/${resultString.textContent}`;
-  }
+  resultFullString.textContent = `https://www.wojas.pl/${resultString.textContent}`;
 }
 
 slug.addEventListener("input", updateValue);
