@@ -4,17 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"/>
     <link rel="stylesheet" href="./css/styles.css" />
 
     <title>Slugify</title>
   </head>
   <body>
-    <input id="slug" placeholder="random text" />
+   <div class="contents">
+   <div class="about">
+      <h1>Slug generator</h1>
 
-    <p id="string"></p>
-    <button id="copy" type="button">Copy slug</button>
-    <p id="https"></p>
-    <button id="copy" type="button">Copy URL</button>
+   </div>
+   <div class="input-container">
+    <input id="slug" class="slug" required="required"/>
+<span class="placeholder" >Enter article title<span> 
+   </div>
+   <div class="results">
+    <div id="string" class="slug-result">
+      <span class="span"> URL RESULT</span>
+      <span id="result-string">-</span>
+       <button id="copy" type="button" class="color copy">Copy</button>
+   </div>
+   
+    <div id="https" class="slug-result"> <span class="span"> FULL URL RESULT</span>
+      <span id="result-full-string">-</span>
+      <button id="copy-full" type="button" class="color copy">Copy</button>
+   </div>
+    </div>
+    </div>
     <script src="./js/script.js"></script>
   </body>
 </html>
