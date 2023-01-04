@@ -5,15 +5,15 @@ const btnFull = document.querySelector("#copy-full");
 const https = document.querySelector("#https");
 const resultString = document.querySelector("#result-string");
 const resultFullString = document.querySelector("#result-full-string");
-const btnText = "Copy";
 const clear = document.querySelector(".clear");
+const btnText = "Copy";
 
 function updateValue(e) {
   resultString.textContent = e.target.value
     .trim()
     .toLowerCase()
     .normalize("NFD")
-    .replaceAll("ł", "l")
+    .replaceAll("ł", "l") // nfd doesnt normalize Ł symbol
     .replace(/[^a-z0-9- ]/g, "")
     .replace(/  +/g, " ")
     .replaceAll(" ", "-");
@@ -22,7 +22,7 @@ function updateValue(e) {
 
 slug.addEventListener("input", updateValue);
 
-function copyUrl(buttons, texts, result) {
+function copyUrl(buttons, result) {
   if (resultString.textContent !== "") {
     navigator.clipboard.writeText(result.textContent);
     buttons.classList.add("copied");
@@ -48,8 +48,8 @@ clear.addEventListener("click", function () {
 });
 
 btn.addEventListener("click", function () {
-  copyUrl(btn, string, resultString);
+  copyUrl(btn, resultString);
 });
 btnFull.addEventListener("click", function () {
-  copyUrl(btnFull, https, resultFullString);
+  copyUrl(btnFull, resultFullString);
 });
