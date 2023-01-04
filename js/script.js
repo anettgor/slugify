@@ -6,12 +6,14 @@ const https = document.querySelector("#https");
 const resultString = document.querySelector("#result-string");
 const resultFullString = document.querySelector("#result-full-string");
 const btnText = "Copy";
+const clear = document.querySelector(".clear");
 
 function updateValue(e) {
   resultString.textContent = e.target.value
     .trim()
     .toLowerCase()
     .normalize("NFD")
+    .replaceAll("ł", "l")
     .replace(/[^a-z0-9- ]/g, "")
     .replace(/  +/g, " ")
     .replaceAll(" ", "-");
@@ -34,6 +36,16 @@ function copyUrl(buttons, texts, result) {
     alert("Enter some text to copy");
   }
 }
+
+function clearAll() {
+  slug.value = "";
+  resultString.textContent = "";
+  resultFullString.textContent = "";
+}
+
+clear.addEventListener("click", function () {
+  clearAll();
+});
 
 btn.addEventListener("click", function () {
   copyUrl(btn, string, resultString);
