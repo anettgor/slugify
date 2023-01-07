@@ -148,6 +148,7 @@ body {
   cursor: pointer;
   transition-property: transform;
   transition-duration: 1500ms;
+  caret-color: transparent;
 }
 
 .clear:hover {
