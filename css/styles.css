@@ -10,9 +10,11 @@ button {
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Nunito", sans-serif;
-  height: 97.99vh;
-  width: 90vw;
+  min-height: 100vh;
   background: rgba(9, 9, 121, 1);
   background-size: 200%;
   background-image: linear-gradient(to left bottom, #d99cdc, #171a95);
